@@ -1,22 +1,16 @@
-package com.comvia.smppsimapi.entitie;
+package com.comvia.smppsimapi.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@ToString
+
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@ToString
 public class UssdMessage {
  
 	private String sourceAddress;
-	private String userMessageReference;
 	private String selectOfferType;
 	private String selectOffe;
 	private String paymentMode;

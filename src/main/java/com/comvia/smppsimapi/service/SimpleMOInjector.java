@@ -1,85 +1,123 @@
 package com.comvia.smppsimapi.service;
 
-
+import static com.comvia.smppsimapi.utils.USSDStatusCode.*;
+import java.security.SecureRandom;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.comvia.smppsimapi.config.SmppsimApiConfig;
-import com.comvia.smppsimapi.entitie.UssdMessage;
+import com.comvia.smppsimapi.model.SingleUssdMessage;
+import com.comvia.smppsimapi.model.UssdMessage;
+import com.comvia.smppsimapi.model.UssdResponse;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
 public class SimpleMOInjector implements ISimpleMOInjector {
-	
+
 	@Autowired
 	private SmppsimApiConfig config;
-	
-	private String sourceAddress;
-	private String userMessageReference;
 
-	
+	private static int userMessageReference;
+	private static SecureRandom random = new SecureRandom();
+
 	@Override
-	public void processUssdMessage(UssdMessage ussdMessage) {
-		
+	public UssdResponse processUssdMessage(UssdMessage ussdMessage) {
+		UssdResponse ussdResponse;
 		try {
 			String urlString = "";
-			sourceAddress = ussdMessage.getSourceAddress();
-			userMessageReference = ussdMessage.getUserMessageReference();
-			
-			urlString = paramToUrlString("*1402*2%23", "0001");
+			int userMessageReference = random.nextInt(config.getRendomRange());
+
+			urlString = paramToUrlString(config.getShortCode().replace("#", "%23"), ussdMessage.getSourceAddress(),
+					userMessageReference, "0001");
 			sendSingleSMS(urlString);
-			log.info("Main menu SMS sent successfully");
-			if(isValidSelection(ussdMessage.getSelectOfferType())) {
-				urlString = paramToUrlString(ussdMessage.getSelectOfferType(), "0012");
+			log.info("Main menu USSD request sent Successfully");
+			if (isValidSelection(ussdMessage.getSelectOfferType())) {
+				urlString = paramToUrlString(ussdMessage.getSelectOfferType(), ussdMessage.getSourceAddress(),
+						userMessageReference, "0012");
 				sleep(5000);
 				sendSingleSMS(urlString);
-				log.info("Select offer type SMS sent successfully");
-				if(isValidSelection(ussdMessage.getSelectOffe())) {
-					urlString = paramToUrlString(ussdMessage.getSelectOffe(), "0012");
+				log.info("Select offer type USSD request sent Successfully");
+				if (isValidSelection(ussdMessage.getSelectOffe())) {
+					urlString = paramToUrlString(ussdMessage.getSelectOffe(), ussdMessage.getSourceAddress(),
+							userMessageReference, "0012");
 					sleep(10000);
 					sendSingleSMS(urlString);
-					log.info("Offer selection SMS sent successfully");
-					if(isValidSelection(ussdMessage.getPaymentMode())) {
-						urlString = paramToUrlString(ussdMessage.getPaymentMode(), "0012");
+					log.info("Offer selection USSD request sent Successfully");
+					if (isValidSelection(ussdMessage.getPaymentMode())) {
+						urlString = paramToUrlString(ussdMessage.getPaymentMode(), ussdMessage.getSourceAddress(),
+								userMessageReference, "0012");
 						sleep(5000);
 						sendSingleSMS(urlString);
-						log.info("Payment mode selection  SMS sent successfully");
-						if(isValidSelection(ussdMessage.getCurrencyType())) {
-							urlString = paramToUrlString(ussdMessage.getCurrencyType(), "0012");
+						log.info("Payment mode selection USSD request sent Successfully");
+						if (isValidSelection(ussdMessage.getCurrencyType())) {
+							urlString = paramToUrlString(ussdMessage.getCurrencyType(), ussdMessage.getSourceAddress(),
+									userMessageReference, "0012");
 							sleep(5000);
 							sendSingleSMS(urlString);
-							log.info("Currency type selection  SMS sent successfully");
+							log.info("Currency type selection USSD request sent Successfully");
 						}
 					}
 				}
 			}
+			ussdResponse = new UssdResponse(SUCCESS.getStatusCode(), SUCCESS.getStatusMessage(),
+					SUCCESS.getDescription());
 		} catch (InterruptedException e) {
 			log.error("Interrupted Exception : ", e);
 			Thread.currentThread().interrupt();
+			ussdResponse = new UssdResponse(INTERNAL_SERVER_ERROR.getStatusCode(),
+					INTERNAL_SERVER_ERROR.getStatusMessage(), INTERNAL_SERVER_ERROR.getDescription());
 		} catch (Exception e) {
-			log.error("Error occurred: ", e);
+			log.error("Error occurred : ", e.getMessage());
+			ussdResponse = new UssdResponse(SERVICE_UNAVAILABLE.getStatusCode(), SERVICE_UNAVAILABLE.getStatusMessage(),
+					SERVICE_UNAVAILABLE.getDescription());
 		}
-		
 		log.info("Program terminated");
+		return ussdResponse;
 	}
-	
+
+	@Override
+	public UssdResponse processSingleUssdMessage(SingleUssdMessage singleUssdMessage) {
+
+		UssdResponse ussdResponse;
+		try {
+			String urlString = "";
+			if (singleUssdMessage.getShortMessage().equals(config.getShortCode())) {
+				userMessageReference = random.nextInt(config.getRendomRange());
+				urlString = paramToUrlString(config.getShortCode().replace("#", "%23"),
+						singleUssdMessage.getSourceAddress(), userMessageReference, "0001");
+				sendSingleSMS(urlString);
+				log.info("Main menu USSD request sent Successfully");
+			} else {
+				urlString = paramToUrlString(singleUssdMessage.getShortMessage(), singleUssdMessage.getSourceAddress(),
+						userMessageReference, "0012");
+				sendSingleSMS(urlString);
+				log.info("USSD request sent Successfully");
+			}
+			ussdResponse = new UssdResponse(SUCCESS.getStatusCode(), SUCCESS.getStatusMessage(),
+					SUCCESS.getDescription());
+		} catch (Exception e) {
+			log.error("Error occurred : ", e.getMessage());
+			ussdResponse = new UssdResponse(SERVICE_UNAVAILABLE.getStatusCode(), SERVICE_UNAVAILABLE.getStatusMessage(),
+					SERVICE_UNAVAILABLE.getDescription());
+		}
+		log.info("Program terminated");
+		return ussdResponse;
+	}
+
 	private boolean isValidSelection(String selection) {
-	    return selection != null && !selection.isEmpty();
+		return selection != null && !selection.isEmpty();
 	}
 
 	private void sleep(long milliseconds) throws InterruptedException {
-	    Thread.sleep(milliseconds);
+		Thread.sleep(milliseconds);
 	}
 
-	
-	public String paramToUrlString(String shortMessage, String optionalTLV1Val){
+	public String paramToUrlString(String shortMessage, String sourceAddress, int userMessageReference, String optionalTLV1Val){
 		String result = "http://" + config.getIpAddress() + ":" + config.getPort() + "/inject_mo?";
 		
 		result = result + "short_message=" + shortMessage;
@@ -94,22 +132,28 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 		return result;
 	}
 	
-	public void sendSingleSMS(String urlString) {
+	private void sendSingleSMS(String urlString) throws Exception{
 		try {
+			log.debug("End Point :- " + urlString);
 			StringBuilder result = new StringBuilder();
 		    URL url = new URL(urlString);
 		    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		    conn.setRequestMethod("GET");
+		    int responseCode = conn.getResponseCode();
+			String responseMessage = conn.getResponseMessage();
+		    log.info("Response Code: " + responseCode + " Response Message: " + responseMessage);
 		    BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 		    String line;
 		    while ((line = rd.readLine()) != null) {
 		       result.append(line);
 		    }
 		    rd.close();
-			log.debug("SMS sent Successfully");
+		    log.debug("Response :- " + result);
+			log.debug("USSD request sent Successfully");
 		} catch (Exception e) {
 			log.error("Failed to send SMS", e);
+			throw e;
 		}
 	}
-	
+
 }

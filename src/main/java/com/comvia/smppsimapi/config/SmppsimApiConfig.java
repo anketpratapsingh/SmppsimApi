@@ -25,6 +25,12 @@ public class SmppsimApiConfig {
 
 	@Value("${smppsim.destination.address}")
 	private String destinationAddress;
+	
+	@Value("${ussd.short.code}")
+	private String shortCode;
+	
+	@Value("${ussd.rendom.range}")
+	private int rendomRange;
 
 
 }
