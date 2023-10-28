@@ -32,7 +32,7 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 			String urlString = "";
 			int userMessageReference = random.nextInt(config.getRendomRange());
 
-			urlString = paramToUrlString(config.getShortCode().replace("#", "%23"), ussdMessage.getSourceAddress(),
+			urlString = paramToUrlString(config.getShortCode(), ussdMessage.getSourceAddress(),
 					userMessageReference, "0001");
 			sendSingleSMS(urlString);
 			log.info("Main menu USSD request sent Successfully");
@@ -88,8 +88,7 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 			String urlString = "";
 			if (singleUssdMessage.getShortMessage().equals(config.getShortCode())) {
 				userMessageReference = random.nextInt(config.getRendomRange());
-				urlString = paramToUrlString(config.getShortCode().replace("#", "%23"),
-						singleUssdMessage.getSourceAddress(), userMessageReference, "0001");
+				urlString = paramToUrlString(config.getShortCode(), singleUssdMessage.getSourceAddress(), userMessageReference, "0001");
 				sendSingleSMS(urlString);
 				log.info("Main menu USSD request sent Successfully");
 			} else {
@@ -120,7 +119,7 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 	public String paramToUrlString(String shortMessage, String sourceAddress, int userMessageReference, String optionalTLV1Val){
 		String result = "http://" + config.getIpAddress() + ":" + config.getPort() + "/inject_mo?";
 		
-		result = result + "short_message=" + shortMessage;
+		result = result + "short_message=" + shortMessage.replace("#", "%23");
 		result = result + "&source_addr=" + sourceAddress;
 		result = result + "&destination_addr=" + config.getDestinationAddress();
 		result = result + "&submit=Submit+Message&service_type=&source_addr_ton=1&source_addr_npi=1&dest_addr_ton=1&dest_addr_npi=1&esm_class=0&protocol_ID=&priority_flag=&registered_delivery_flag=0&data_coding=0";
