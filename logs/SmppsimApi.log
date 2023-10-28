@@ -1,9 +1,30 @@
-2023-10-21 17:16:47.758  INFO 3100 --- [main] c.c.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on DESKTOP-RJTFBEU with PID 3100 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
-2023-10-21 17:16:47.779  INFO 3100 --- [main] c.c.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
-2023-10-21 17:16:53.483  INFO 3100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-10-21 17:16:53.526  INFO 3100 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-21 17:16:53.526  INFO 3100 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
-2023-10-21 17:16:54.254  INFO 3100 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-21 17:16:54.255  INFO 3100 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6227 ms
-2023-10-21 17:16:55.679  INFO 3100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-10-21 17:16:56.252  INFO 3100 --- [main] c.c.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 10.027 seconds (JVM running for 11.239)
+2023-10-28 18:09:56.427  INFO 19032 --- [main] c.c.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on DESKTOP-RJTFBEU with PID 19032 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2023-10-28 18:09:56.431  INFO 19032 --- [main] c.c.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-10-28 18:09:57.966  INFO 19032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-28 18:09:57.976  INFO 19032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-28 18:09:57.977  INFO 19032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-10-28 18:09:58.132  INFO 19032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-28 18:09:58.133  INFO 19032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1654 ms
+2023-10-28 18:09:58.874  INFO 19032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-28 18:09:59.209  INFO 19032 --- [main] c.c.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 3.208 seconds (JVM running for 3.615)
+2023-10-28 18:10:57.340  INFO 19032 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-28 18:10:57.340  INFO 19032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-28 18:10:57.342  INFO 19032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-28 18:10:57.412  INFO 19032 --- [http-nio-8080-exec-1] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(sourceAddress=243811404441, shortMessage1=1, shortMessage2=*, shortMessage3=#, shortMessage4=3, shortMessage5=, shortMessage6=, shortMessage7=, shortMessage8=, shortMessage9=)
+2023-10-28 18:10:58.070  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
+2023-10-28 18:10:58.071  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
+2023-10-28 18:10:58.072  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 1
+2023-10-28 18:11:05.715  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
+2023-10-28 18:11:05.715  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
+2023-10-28 18:11:05.715  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: *
+2023-10-28 18:11:13.373  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
+2023-10-28 18:11:13.374  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
+2023-10-28 18:11:13.374  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage3: #
+2023-10-28 18:11:21.050  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
+2023-10-28 18:11:21.051  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
+2023-10-28 18:11:21.052  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage4: 3
+2023-10-28 18:11:28.714  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
+2023-10-28 18:11:28.716  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
+2023-10-28 18:11:28.716  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage5: 
+2023-10-28 18:11:28.720  INFO 19032 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
+2023-10-28 18:12:55.490  INFO 19032 --- [http-nio-8080-exec-9] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(sourceAddress=string, shortMessage1=string, shortMessage2=string, shortMessage3=string, shortMessage4=string, shortMessage5=string, shortMessage6=string, shortMessage7=string, shortMessage8=string, shortMessage9=string)

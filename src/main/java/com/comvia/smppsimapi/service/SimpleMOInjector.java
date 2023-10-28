@@ -1,13 +1,19 @@
 package com.comvia.smppsimapi.service;
 
-import static com.comvia.smppsimapi.utils.USSDStatusCode.*;
-import java.security.SecureRandom;
+import static com.comvia.smppsimapi.utils.USSDStatusCode.INTERNAL_SERVER_ERROR;
+import static com.comvia.smppsimapi.utils.USSDStatusCode.SERVICE_UNAVAILABLE;
+import static com.comvia.smppsimapi.utils.USSDStatusCode.SUCCESS;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.lang.reflect.Field;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.security.SecureRandom;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.comvia.smppsimapi.config.SmppsimApiConfig;
 import com.comvia.smppsimapi.model.SingleUssdMessage;
 import com.comvia.smppsimapi.model.UssdMessage;
@@ -32,38 +38,29 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 			String urlString = "";
 			int userMessageReference = random.nextInt(config.getRendomRange());
 
-			urlString = paramToUrlString(config.getShortCode(), ussdMessage.getSourceAddress(),
-					userMessageReference, "0001");
+			urlString = paramToUrlString(config.getShortCode(), ussdMessage.getSourceAddress(), userMessageReference, "0001");
 			sendSingleSMS(urlString);
 			log.info("Main menu USSD request sent Successfully");
-			if (isValidSelection(ussdMessage.getSelectOfferType())) {
-				urlString = paramToUrlString(ussdMessage.getSelectOfferType(), ussdMessage.getSourceAddress(),
-						userMessageReference, "0012");
-				sleep(5000);
-				sendSingleSMS(urlString);
-				log.info("Select offer type USSD request sent Successfully");
-				if (isValidSelection(ussdMessage.getSelectOffe())) {
-					urlString = paramToUrlString(ussdMessage.getSelectOffe(), ussdMessage.getSourceAddress(),
-							userMessageReference, "0012");
-					sleep(10000);
-					sendSingleSMS(urlString);
-					log.info("Offer selection USSD request sent Successfully");
-					if (isValidSelection(ussdMessage.getPaymentMode())) {
-						urlString = paramToUrlString(ussdMessage.getPaymentMode(), ussdMessage.getSourceAddress(),
-								userMessageReference, "0012");
-						sleep(5000);
+
+			// Access all fields using Reflection
+			Field[] fields = UssdMessage.class.getDeclaredFields();
+			for (Field field : fields) {
+				field.setAccessible(true);
+				// Check if the field name starts with "shortMessage"
+				if (field.getName().startsWith("shortMessage")) {
+					String value = (String) field.get(ussdMessage);
+					log.info(field.getName() + ": " + value);
+					if (isValidSelection(value)) {
+						urlString = paramToUrlString(value, ussdMessage.getSourceAddress(), userMessageReference, "0012");
+						sleep(7000);
 						sendSingleSMS(urlString);
-						log.info("Payment mode selection USSD request sent Successfully");
-						if (isValidSelection(ussdMessage.getCurrencyType())) {
-							urlString = paramToUrlString(ussdMessage.getCurrencyType(), ussdMessage.getSourceAddress(),
-									userMessageReference, "0012");
-							sleep(5000);
-							sendSingleSMS(urlString);
-							log.info("Currency type selection USSD request sent Successfully");
-						}
+						log.info("USSD request sent Successfully");
+					}else {
+						break;
 					}
 				}
 			}
+			
 			ussdResponse = new UssdResponse(SUCCESS.getStatusCode(), SUCCESS.getStatusMessage(),
 					SUCCESS.getDescription());
 		} catch (InterruptedException e) {
@@ -88,7 +85,8 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 			String urlString = "";
 			if (singleUssdMessage.getShortMessage().equals(config.getShortCode())) {
 				userMessageReference = random.nextInt(config.getRendomRange());
-				urlString = paramToUrlString(config.getShortCode(), singleUssdMessage.getSourceAddress(), userMessageReference, "0001");
+				urlString = paramToUrlString(config.getShortCode(), singleUssdMessage.getSourceAddress(),
+						userMessageReference, "0001");
 				sendSingleSMS(urlString);
 				log.info("Main menu USSD request sent Successfully");
 			} else {
@@ -130,24 +128,24 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 		
 		return result;
 	}
-	
-	private void sendSingleSMS(String urlString) throws Exception{
+
+	private void sendSingleSMS(String urlString) throws Exception {
 		try {
 			log.debug("End Point :- " + urlString);
 			StringBuilder result = new StringBuilder();
-		    URL url = new URL(urlString);
-		    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-		    conn.setRequestMethod("GET");
-		    int responseCode = conn.getResponseCode();
+			URL url = new URL(urlString);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestMethod("GET");
+			int responseCode = conn.getResponseCode();
 			String responseMessage = conn.getResponseMessage();
-		    log.info("Response Code: " + responseCode + " Response Message: " + responseMessage);
-		    BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-		    String line;
-		    while ((line = rd.readLine()) != null) {
-		       result.append(line);
-		    }
-		    rd.close();
-		    log.debug("Response :- " + result);
+			log.info("Response Code: " + responseCode + " Response Message: " + responseMessage);
+			BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			String line;
+			while ((line = rd.readLine()) != null) {
+				result.append(line);
+			}
+			rd.close();
+			log.debug("Response :- " + result);
 			log.debug("USSD request sent Successfully");
 		} catch (Exception e) {
 			log.error("Failed to send SMS", e);
