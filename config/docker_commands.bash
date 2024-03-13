@@ -99,3 +99,14 @@ docker rmi custom_image:tag
 
 # Remove a Network
 docker network rm my_network
+
+
+# Stop and remove all running containers
+docker stop $(docker ps -q) && docker rm $(docker ps -aq)
+
+# Pull the latest version of an image
+docker pull image_name:latest
+
+# Run a container from the updated image
+docker run -d -p host_port:container_port --name my_container image_name:latest
+

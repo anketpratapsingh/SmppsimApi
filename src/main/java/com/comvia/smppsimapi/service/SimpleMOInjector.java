@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.net.HttpURLConnection;
+import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.security.SecureRandom;
 
@@ -36,9 +37,9 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 		UssdResponse ussdResponse;
 		try {
 			String urlString = "";
-			int userMessageReference = random.nextInt(config.getRendomRange());
+			int userMessageReferences = random.nextInt(config.getRendomRange());
 
-			urlString = paramToUrlString(config.getShortCode(), ussdMessage.getSourceAddress(), userMessageReference, "0001");
+			urlString = paramToUrlString(config.getShortCode(), ussdMessage.getMsisdn(), userMessageReferences, "0001");
 			sendSingleSMS(urlString);
 			log.info("Main menu USSD request sent Successfully");
 
@@ -51,7 +52,7 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 					String value = (String) field.get(ussdMessage);
 					log.info(field.getName() + ": " + value);
 					if (isValidSelection(value)) {
-						urlString = paramToUrlString(value, ussdMessage.getSourceAddress(), userMessageReference, "0012");
+						urlString = paramToUrlString(value, ussdMessage.getMsisdn(), userMessageReferences, "0012");
 						sleep(7000);
 						sendSingleSMS(urlString);
 						log.info("USSD request sent Successfully");
@@ -85,12 +86,12 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 			String urlString = "";
 			if (singleUssdMessage.getShortMessage().equals(config.getShortCode())) {
 				userMessageReference = random.nextInt(config.getRendomRange());
-				urlString = paramToUrlString(config.getShortCode(), singleUssdMessage.getSourceAddress(),
+				urlString = paramToUrlString(config.getShortCode(), singleUssdMessage.getMsisdn(),
 						userMessageReference, "0001");
 				sendSingleSMS(urlString);
 				log.info("Main menu USSD request sent Successfully");
 			} else {
-				urlString = paramToUrlString(singleUssdMessage.getShortMessage(), singleUssdMessage.getSourceAddress(),
+				urlString = paramToUrlString(singleUssdMessage.getShortMessage(), singleUssdMessage.getMsisdn(),
 						userMessageReference, "0012");
 				sendSingleSMS(urlString);
 				log.info("USSD request sent Successfully");
@@ -129,28 +130,41 @@ public class SimpleMOInjector implements ISimpleMOInjector {
 		return result;
 	}
 
-	private void sendSingleSMS(String urlString) throws Exception {
-		try {
-			log.debug("End Point :- " + urlString);
-			StringBuilder result = new StringBuilder();
-			URL url = new URL(urlString);
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			conn.setRequestMethod("GET");
-			int responseCode = conn.getResponseCode();
-			String responseMessage = conn.getResponseMessage();
-			log.info("Response Code: " + responseCode + " Response Message: " + responseMessage);
-			BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-			String line;
-			while ((line = rd.readLine()) != null) {
-				result.append(line);
-			}
-			rd.close();
-			log.debug("Response :- " + result);
-			log.debug("USSD request sent Successfully");
-		} catch (Exception e) {
-			log.error("Failed to send SMS", e);
-			throw e;
-		}
+	private synchronized void sendSingleSMS(String urlString) throws Exception {
+	    try {
+	        if(config.getDisplayEndPoint() == 1)
+	            log.info("End Point :- " + urlString);
+	        StringBuilder result = new StringBuilder();
+	        URL url = new URL(urlString);
+	        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+	        
+	        // Set connection and read timeout (e.g., 30 seconds)
+	        conn.setConnectTimeout(config.getConnTimeoutMillis());
+	        conn.setReadTimeout(config.getReadTimeoutMillis());
+	        
+	        conn.setRequestMethod("GET");
+	        int responseCode = conn.getResponseCode();
+	        String responseMessage = conn.getResponseMessage();
+	        log.info("Response Code: " + responseCode + " Response Message: " + responseMessage);
+	        
+	        BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+	        String line;
+	        while ((line = rd.readLine()) != null) {
+	            result.append(line);
+	        }
+	        rd.close();
+	        log.debug("Response :- " + result);
+	        log.debug("USSD request sent Successfully");
+	    } catch (SocketTimeoutException e) {
+	        // Handle timeout exception
+	        log.error("Connection timed out while sending SMS", e);
+	        throw new Exception("Connection timed out while sending SMS", e);
+	    } catch (Exception e) {
+	        // Handle other exceptions
+	        log.error("Failed to send SMS", e);
+	        throw e;
+	    }
 	}
+
 
 }

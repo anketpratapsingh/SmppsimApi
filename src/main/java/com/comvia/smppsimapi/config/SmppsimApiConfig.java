@@ -31,6 +31,15 @@ public class SmppsimApiConfig {
 	
 	@Value("${ussd.rendom.range}")
 	private int rendomRange;
+	
+	@Value("${ussd.log.display.end.point.flag}")
+	private int displayEndPoint;
+	
+	@Value("${ussd.connection.timeoutMillis}")
+    private int connTimeoutMillis ;
+    
+    @Value("${ussd.read.timeoutMillis}")
+    private int readTimeoutMillis ;
 
 
 }

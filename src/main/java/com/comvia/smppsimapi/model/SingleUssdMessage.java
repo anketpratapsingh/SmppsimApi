@@ -9,6 +9,6 @@ import lombok.ToString;
 @ToString
 public class SingleUssdMessage {
 	
-	private String sourceAddress;
+	private String msisdn;
 	private String shortMessage;
 }

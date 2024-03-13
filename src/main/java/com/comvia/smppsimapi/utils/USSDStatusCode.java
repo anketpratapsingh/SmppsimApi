@@ -14,7 +14,8 @@ public enum USSDStatusCode {
 
     // Additional error codes for input validation and missing parameters
     INVALID_INPUT(400, "Invalid input data", "Please enter valid MSISDN"),
-    MISSING_REQUIRED_PARAMETER(401, "Required parameter is missing", "MSISDN is missing");
+    MISSING_REQUIRED_PARAMETER(401, "Required parameter is missing", "MSISDN is missing"),
+	MISSING_REQUIRED_PARAMETERS(401, "Required parameter is missing", "MSISDN or Short Message is missing");
 
     private static final Map<Integer, String> statusCodeMap = initializeStatusCodeMap();
 

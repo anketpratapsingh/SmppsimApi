@@ -10,7 +10,7 @@ import lombok.ToString;
 @ToString
 public class UssdMessage {
  
-	private String sourceAddress;
+	private String msisdn;
 	
 	private String shortMessage1;
 	private String shortMessage2;
