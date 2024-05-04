@@ -1,22 +1,29 @@
-package com.comvia.smppsimapi.utils;
+package com.anket.smppsimapi.utils;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public enum USSDStatusCode {
 
-    // Success codes and messages
+	// Success codes and messages
     SUCCESS(200, "Success", "USSD request sent Successfully"),
 
     // Server error codes and messages
     INTERNAL_SERVER_ERROR(500, "Internal Server Error", "Internal Server Error"),
     SERVICE_UNAVAILABLE(503, "Server Unavailable", "SMPP Server Unavailable"),
+    GATEWAY_TIMEOUT(504, "Gateway Timeout", "Gateway Timeout"),
 
     // Additional error codes for input validation and missing parameters
-    INVALID_INPUT(400, "Invalid input data", "Please enter valid MSISDN"),
-    MISSING_REQUIRED_PARAMETER(401, "Required parameter is missing", "MSISDN is missing"),
-	MISSING_REQUIRED_PARAMETERS(401, "Required parameter is missing", "MSISDN or Short Message is missing");
+    INVALID_INPUT(1001, "Invalid MSISDN", "MSISDN must be a non-empty string of length 12"),
+    MISSING_REQUIRED_PARAMETER(1002, "Required parameter is missing", "MSISDN is missing"),
+    MISSING_REQUIRED_PARAMETERS(1003, "Required parameter is missing", "MSISDN or Short Message is missing"),
+    INVALID_SHORT_MESSAGE(1004, "Invalid short message", "Short message must be a non-empty string"),
+    MSISDN_MISMATCH(1005, "MSISDN mismatch", "Received MSISDN does not match the expected MSISDN"),
 
+    // New error code for general failure
+    GENERAL_FAILURE(1006, "General failure", "An unknown error occurred while processing the request"),
+	UNKNOWN_HOST(1007, "Unknown Host", "Invalid hostname or DNS resolution failure");
+	
     private static final Map<Integer, String> statusCodeMap = initializeStatusCodeMap();
 
     private int statusCode;

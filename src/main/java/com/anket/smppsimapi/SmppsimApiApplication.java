@@ -1,4 +1,4 @@
-package com.comvia.smppsimapi;
+package com.anket.smppsimapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

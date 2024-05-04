@@ -1,11 +1,5 @@
-package com.comvia.smppsimapi.controller;
+package com.anket.smppsimapi.controller;
 
-import com.comvia.smppsimapi.model.SingleUssdMessage;
-import com.comvia.smppsimapi.model.UssdMessage;
-import com.comvia.smppsimapi.model.UssdResponse;
-import com.comvia.smppsimapi.service.ISimpleMOInjector;
-import com.comvia.smppsimapi.utils.USSDStatusCode;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +7,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.anket.smppsimapi.model.SingleUssdMessage;
+import com.anket.smppsimapi.model.UssdMessage;
+import com.anket.smppsimapi.model.UssdResponse;
+import com.anket.smppsimapi.service.ISimpleMOInjector;
+import com.anket.smppsimapi.utils.USSDStatusCode;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController

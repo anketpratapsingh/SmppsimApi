@@ -1,4 +1,4 @@
-package com.comvia.smppsimapi.model;
+package com.anket.smppsimapi.model;
 
 import lombok.Getter;
 import lombok.Setter;

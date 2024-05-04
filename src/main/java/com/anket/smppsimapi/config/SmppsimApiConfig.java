@@ -1,4 +1,4 @@
-package com.comvia.smppsimapi.config;
+package com.anket.smppsimapi.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,7 +10,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Configuration
-@ComponentScan(basePackages = "com.comvia.smppsimapi.*")
+@ComponentScan(basePackages = "com.anket.smppsimapi.*")
 @PropertySource("file:${user.dir}/config/SmppsimApi.properties")
 @Getter
 @Setter

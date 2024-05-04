@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+
+option java_package = "com.anket.gRPC";
+
+message USSDRequest {
+  string msisdn = 1;
+  string shortMessage1 = 2;
+  string shortMessage2 = 3;
+  string shortMessage3 = 4;
+  string shortMessage4 = 5;
+  string shortMessage5 = 6;
+  string shortMessage6 = 7;
+  string shortMessage7 = 8;
+  string shortMessage8 = 9;
+  string shortMessage9 = 10;
+  
+}
+
+message SingleUSSDRequest {
+  string msisdn = 1;
+  string shortMessage = 2;
+}
+
+message USSDResponse {
+  int32 statusCode = 1;
+  string statusMessage = 2;
+  string statusDescription = 3;
+}
+
+
+
+service USSDService {
+
+  // server-side streaming
+  rpc ussdRequest(USSDRequest) returns(stream USSDResponse);
+
+  // both side streaming
+  rpc singleUssdRequest(stream SingleUSSDRequest) returns (stream USSDResponse);
+}
+

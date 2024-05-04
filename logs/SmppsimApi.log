@@ -1,287 +1,734 @@
-2024-03-12 12:44:28.298  INFO 4800 --- [restartedMain] c.c.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 4800 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
-2024-03-12 12:44:28.303  INFO 4800 --- [restartedMain] c.c.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-03-12 12:44:28.432  INFO 4800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-12 12:44:28.433  INFO 4800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-12 12:44:32.825  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-12 12:44:32.848  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-12 12:44:32.849  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
-2024-03-12 12:44:33.037  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-12 12:44:33.037  INFO 4800 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4603 ms
-2024-03-12 12:44:34.826  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-03-12 12:44:35.277  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-12 12:44:35.518  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
-2024-03-12 12:44:35.521  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-12 12:44:35.522  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
-2024-03-12 12:44:35.562  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2024-03-12 12:44:35.563  INFO 4800 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 275 ms
-2024-03-12 12:44:35.600  INFO 4800 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 9 endpoint(s) beneath base path '/actuator'
-2024-03-12 12:44:35.681  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
-2024-03-12 12:44:36.143  INFO 4800 --- [restartedMain] c.c.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 8.755 seconds (JVM running for 9.758)
-2024-03-12 12:44:55.534  INFO 4800 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-12 12:44:55.535  INFO 4800 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-12 12:44:55.544  INFO 4800 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2024-03-12 12:44:55.768  INFO 4800 --- [http-nio-8080-exec-3] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 12:44:56.380  INFO 4800 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 12:44:56.386  INFO 4800 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 12:44:56.388  INFO 4800 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 12:45:04.006  INFO 4800 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 12:45:04.008  INFO 4800 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 12:45:04.009  INFO 4800 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 12:45:04.010  INFO 4800 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 12:45:24.582  INFO 4800 --- [http-nio-8080-exec-1] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 12:45:25.253  INFO 4800 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 12:45:25.256  INFO 4800 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 12:45:25.257  INFO 4800 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 12:45:32.932  INFO 4800 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 12:45:32.934  INFO 4800 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 12:45:32.934  INFO 4800 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 12:45:32.935  INFO 4800 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 12:47:46.473  INFO 26352 --- [restartedMain] c.c.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 26352 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
-2024-03-12 12:47:46.476  INFO 26352 --- [restartedMain] c.c.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
-2024-03-12 12:47:46.617  INFO 26352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-12 12:47:46.618  INFO 26352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-12 12:47:51.654  INFO 26352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-03-12 12:47:51.677  INFO 26352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-12 12:47:51.679  INFO 26352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
-2024-03-12 12:47:51.872  INFO 26352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-12 12:47:51.873  INFO 26352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5253 ms
-2024-03-12 12:47:53.907  INFO 26352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-03-12 12:47:54.559  INFO 26352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-03-12 12:47:54.869  INFO 26352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
-2024-03-12 12:47:54.872  INFO 26352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-12 12:47:54.874  INFO 26352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
-2024-03-12 12:47:54.938  INFO 26352 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
-2024-03-12 12:47:54.938  INFO 26352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 363 ms
-2024-03-12 12:47:54.987  INFO 26352 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 9 endpoint(s) beneath base path '/actuator'
-2024-03-12 12:47:55.128  INFO 26352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
-2024-03-12 12:47:55.819  INFO 26352 --- [restartedMain] c.c.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 10.608 seconds (JVM running for 11.632)
-2024-03-12 12:48:12.672  INFO 26352 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-12 12:48:12.673  INFO 26352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-12 12:48:12.685  INFO 26352 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2024-03-12 12:48:12.948  INFO 26352 --- [http-nio-8080-exec-2] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 12:48:13.525  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 12:48:13.530  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 12:48:13.531  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 12:48:21.243  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 12:48:21.245  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 12:48:21.246  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 12:48:21.247  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 12:54:38.042  INFO 26352 --- [http-nio-8080-exec-5] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 12:54:38.730  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 12:54:38.733  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 12:54:38.734  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 12:54:46.306  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 12:54:46.309  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 12:54:46.309  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 12:54:46.309  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 13:35:35.176  INFO 26352 --- [http-nio-8080-exec-8] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243918314888, shortMessage1=, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 13:35:35.738  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 13:35:35.740  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 13:35:35.740  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 
-2024-03-12 13:35:35.741  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 13:36:02.742  INFO 26352 --- [http-nio-8080-exec-9] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243918314888, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 13:36:03.349  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 13:36:03.353  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 13:36:03.354  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 13:36:10.953  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 13:36:10.955  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 13:36:10.956  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 13:36:10.956  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 13:52:46.131  INFO 26352 --- [http-nio-8080-exec-2] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 13:52:46.698  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 13:52:46.702  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 13:52:46.703  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 13:52:54.371  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 13:52:54.374  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 13:52:54.375  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 13:52:54.376  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 13:53:41.503  INFO 26352 --- [http-nio-8080-exec-3] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 13:53:42.096  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 13:53:42.098  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 13:53:42.099  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 13:53:49.780  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 13:53:49.781  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 13:53:49.782  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 13:53:49.782  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 13:59:43.168  INFO 26352 --- [http-nio-8080-exec-6] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 13:59:43.743  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 13:59:43.744  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 13:59:43.745  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 13:59:51.315  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 13:59:51.318  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 13:59:51.318  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 13:59:51.318  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:00:02.304  INFO 26352 --- [http-nio-8080-exec-7] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:00:02.877  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:00:02.879  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:00:02.880  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:00:10.442  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:00:10.443  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:00:10.444  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 14:00:10.444  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:02:26.767  INFO 26352 --- [http-nio-8080-exec-10] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:02:27.381  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:02:27.383  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:02:27.385  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:02:34.991  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:02:34.992  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:02:34.993  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 14:02:34.993  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:03:47.483  INFO 26352 --- [http-nio-8080-exec-3] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:03:48.038  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:03:48.041  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:03:48.041  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:03:55.663  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:03:55.664  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:03:55.664  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 14:03:55.664  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:21:31.289  INFO 26352 --- [http-nio-8080-exec-6] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:21:31.839  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:21:31.840  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:21:31.840  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:21:39.406  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:21:39.408  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:21:39.408  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 14:21:39.409  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:23:24.111  INFO 26352 --- [http-nio-8080-exec-9] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:23:24.679  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:23:24.681  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:23:24.682  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:23:32.235  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:23:32.237  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:23:32.238  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 14:23:32.238  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:24:53.391  INFO 26352 --- [http-nio-8080-exec-2] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:24:53.948  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:24:53.949  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:24:53.949  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:25:01.517  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:25:01.519  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:25:01.519  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 14:25:01.519  INFO 26352 --- [http-nio-8080-exec-2] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:26:03.371  INFO 26352 --- [http-nio-8080-exec-5] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:26:03.924  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:26:03.926  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:26:03.926  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:26:11.485  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:26:11.488  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:26:11.488  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 14:26:11.489  INFO 26352 --- [http-nio-8080-exec-5] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:27:53.595  INFO 26352 --- [http-nio-8080-exec-8] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=, shortMessage3=, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:27:54.146  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:27:54.148  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:27:54.148  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:28:01.723  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:28:01.724  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:28:01.724  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 
-2024-03-12 14:28:01.725  INFO 26352 --- [http-nio-8080-exec-8] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:32:06.415  INFO 26352 --- [http-nio-8080-exec-1] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=2, shortMessage3=1, shortMessage4=, shortMessage5=1, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:32:06.980  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:32:06.982  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:32:06.982  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:32:14.540  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:32:14.542  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:32:14.543  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 2
-2024-03-12 14:32:22.108  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:32:22.112  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:32:22.113  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage3: 1
-2024-03-12 14:32:29.668  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:32:29.672  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:32:29.672  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage4: 
-2024-03-12 14:32:29.672  INFO 26352 --- [http-nio-8080-exec-1] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:34:47.473  INFO 26352 --- [http-nio-8080-exec-4] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=1, shortMessage3=2, shortMessage4=1, shortMessage5=, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:34:48.034  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:34:48.035  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:34:48.036  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:34:55.602  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:34:55.604  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:34:55.605  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 1
-2024-03-12 14:35:03.204  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:35:03.205  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:35:03.205  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage3: 2
-2024-03-12 14:35:10.764  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:35:10.765  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:35:10.765  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage4: 1
-2024-03-12 14:35:18.347  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:35:18.349  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:35:18.349  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage5: 
-2024-03-12 14:35:18.349  INFO 26352 --- [http-nio-8080-exec-4] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:37:25.399  INFO 26352 --- [http-nio-8080-exec-7] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=5, shortMessage3=1, shortMessage4=, shortMessage5=, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:37:25.967  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:37:25.969  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:37:25.969  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:37:33.536  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:37:33.538  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:37:33.539  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 5
-2024-03-12 14:37:41.094  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:37:41.098  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:37:41.099  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage3: 1
-2024-03-12 14:37:48.680  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:37:48.683  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:37:48.683  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage4: 
-2024-03-12 14:37:48.683  INFO 26352 --- [http-nio-8080-exec-7] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:41:12.083  INFO 26352 --- [http-nio-8080-exec-10] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=5, shortMessage3=1, shortMessage4=, shortMessage5=, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:41:12.637  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:41:12.639  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:41:12.640  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:41:20.193  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:41:20.194  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:41:20.194  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 5
-2024-03-12 14:41:27.758  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:41:27.760  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:41:27.761  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage3: 1
-2024-03-12 14:41:35.312  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:41:35.314  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:41:35.315  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage4: 
-2024-03-12 14:41:35.315  INFO 26352 --- [http-nio-8080-exec-10] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:42:55.876  INFO 26352 --- [http-nio-8080-exec-3] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=3, shortMessage3=2, shortMessage4=1, shortMessage5=, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:42:56.430  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:42:56.432  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:42:56.432  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:43:03.997  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:43:03.999  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:43:03.999  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 3
-2024-03-12 14:43:11.567  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:43:11.569  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:43:11.569  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage3: 2
-2024-03-12 14:43:19.136  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:43:19.138  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:43:19.138  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage4: 1
-2024-03-12 14:43:26.696  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:43:26.699  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:43:26.699  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage5: 
-2024-03-12 14:43:26.699  INFO 26352 --- [http-nio-8080-exec-3] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 14:45:22.578  INFO 26352 --- [http-nio-8080-exec-6] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243811404441, shortMessage1=5, shortMessage2=1, shortMessage3=2, shortMessage4=2, shortMessage5=, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 14:45:23.128  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:45:23.130  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 14:45:23.130  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 14:45:30.685  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:45:30.687  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:45:30.688  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 1
-2024-03-12 14:45:38.246  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:45:38.247  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:45:38.247  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage3: 2
-2024-03-12 14:45:45.808  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:45:45.810  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:45:45.811  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage4: 2
-2024-03-12 14:45:53.371  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 14:45:53.373  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 14:45:53.374  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage5: 
-2024-03-12 14:45:53.374  INFO 26352 --- [http-nio-8080-exec-6] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
-2024-03-12 15:08:02.023  INFO 26352 --- [http-nio-8080-exec-9] c.c.s.controller.SmppsimController       : JSON request :: UssdMessage(msisdn=243918314888, shortMessage1=5, shortMessage2=1, shortMessage3=2, shortMessage4=2, shortMessage5=, shortMessage6=, shortMessage7=*, shortMessage8=1, shortMessage9=1)
-2024-03-12 15:08:02.576  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 15:08:02.577  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Main menu USSD request sent Successfully
-2024-03-12 15:08:02.577  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage1: 5
-2024-03-12 15:08:10.135  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 15:08:10.136  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 15:08:10.136  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage2: 1
-2024-03-12 15:08:17.702  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 15:08:17.704  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 15:08:17.704  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage3: 2
-2024-03-12 15:08:25.253  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 15:08:25.255  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 15:08:25.255  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage4: 2
-2024-03-12 15:08:32.816  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Response Code: 200 Response Message: OK
-2024-03-12 15:08:32.817  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : USSD request sent Successfully
-2024-03-12 15:08:32.817  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : shortMessage5: 
-2024-03-12 15:08:32.817  INFO 26352 --- [http-nio-8080-exec-9] c.c.smppsimapi.service.SimpleMOInjector  : Program terminated
+2024-05-04 13:43:11.094  INFO 21588 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 21588 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2024-05-04 13:43:11.099  INFO 21588 --- [main] c.a.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-05-04 13:43:13.252  INFO 21588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-04 13:43:13.271  INFO 21588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 13:43:13.273  INFO 21588 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 13:43:13.476  INFO 21588 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-04 13:43:13.476  INFO 21588 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2323 ms
+2024-05-04 13:43:13.706  WARN 21588 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'USSDServiceController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.anket.smppsimapi.controller.USSDServiceController] from ClassLoader [sun.misc.Launcher$AppClassLoader@73d16e93]
+2024-05-04 13:43:13.717  INFO 21588 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-05-04 13:43:13.742  INFO 21588 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-04 13:43:13.773 ERROR 21588 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'USSDServiceController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.anket.smppsimapi.controller.USSDServiceController] from ClassLoader [sun.misc.Launcher$AppClassLoader@73d16e93]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1302) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.29.jar:5.3.29]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.29.jar:5.3.29]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) [spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) [spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) [spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) [spring-boot-2.7.15.jar:2.7.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) [spring-boot-2.7.15.jar:2.7.15]
+	at com.anket.smppsimapi.SmppsimApiApplication.main(SmppsimApiApplication.java:10) [classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.anket.smppsimapi.controller.USSDServiceController] from ClassLoader [sun.misc.Launcher$AppClassLoader@73d16e93]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.29.jar:5.3.29]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321) ~[spring-core-5.3.29.jar:5.3.29]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267) ~[spring-beans-5.3.29.jar:5.3.29]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: USSDRequest
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[na:1.8.0_202]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701) ~[na:1.8.0_202]
+	at java.lang.Class.getDeclaredMethods(Class.java:1975) ~[na:1.8.0_202]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.29.jar:5.3.29]
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: USSDRequest
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_202]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[na:1.8.0_202]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_202]
+	... 24 common frames omitted
+
+2024-05-04 13:46:37.737  INFO 20940 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 20940 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2024-05-04 13:46:37.746  INFO 20940 --- [main] c.a.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-05-04 13:46:40.618  INFO 20940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-04 13:46:40.635  INFO 20940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 13:46:40.635  INFO 20940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 13:46:40.857  INFO 20940 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-04 13:46:40.857  INFO 20940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3031 ms
+2024-05-04 13:46:42.996  INFO 20940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-04 13:46:43.120  INFO 20940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2024-05-04 13:46:43.122  INFO 20940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 13:46:43.123  INFO 20940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 13:46:43.154  INFO 20940 --- [main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-05-04 13:46:43.155  INFO 20940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 153 ms
+2024-05-04 13:46:43.176  INFO 20940 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 9 endpoint(s) beneath base path '/actuator'
+2024-05-04 13:46:43.274  INFO 20940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2024-05-04 13:46:43.685  INFO 20940 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: USSDService, bean: USSDServiceController, class: com.anket.smppsimapi.controller.USSDServiceController
+2024-05-04 13:46:44.981  INFO 20940 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9001
+2024-05-04 13:46:44.998  INFO 20940 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 7.811 seconds (JVM running for 8.332)
+2024-05-04 13:47:05.235  INFO 20940 --- [grpc-default-executor-0] c.a.s.service.SingleUSSDRequestHandler   : Streaming started
+2024-05-04 13:47:26.334 ERROR 20940 --- [grpc-default-executor-0] com.anket.smppsimapi.utils.HTTPSclient   : Failed to send USSD
+
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.service.SingleUSSDRequestHandler.onNext(SingleUSSDRequestHandler.java:76) [classes/:na]
+	at com.anket.smppsimapi.service.SingleUSSDRequestHandler.onNext(SingleUSSDRequestHandler.java:1) [classes/:na]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:249) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onMessage(ForwardingServerCallListener.java:33) [grpc-api-1.22.2.jar:1.22.2]
+	at net.devh.boot.grpc.server.metric.MetricCollectingServerCallListener.onMessage(MetricCollectingServerCallListener.java:48) [grpc-server-spring-boot-autoconfigure-2.5.1.RELEASE.jar:2.5.1.RELEASE]
+	at io.grpc.ForwardingServerCallListener.onMessage(ForwardingServerCallListener.java:33) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onMessage(Contexts.java:76) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:773) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 13:47:26.336 ERROR 20940 --- [grpc-default-executor-0] c.a.s.service.SingleUSSDRequestHandler   : Error occurred :: 
+
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.service.SingleUSSDRequestHandler.onNext(SingleUSSDRequestHandler.java:76) [classes/:na]
+	at com.anket.smppsimapi.service.SingleUSSDRequestHandler.onNext(SingleUSSDRequestHandler.java:1) [classes/:na]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:249) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onMessage(ForwardingServerCallListener.java:33) [grpc-api-1.22.2.jar:1.22.2]
+	at net.devh.boot.grpc.server.metric.MetricCollectingServerCallListener.onMessage(MetricCollectingServerCallListener.java:48) [grpc-server-spring-boot-autoconfigure-2.5.1.RELEASE.jar:2.5.1.RELEASE]
+	at io.grpc.ForwardingServerCallListener.onMessage(ForwardingServerCallListener.java:33) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onMessage(Contexts.java:76) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:773) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 13:53:49.576  INFO 11148 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 11148 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2024-05-04 13:53:49.580  INFO 11148 --- [main] c.a.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-05-04 13:53:51.388  INFO 11148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-04 13:53:51.399  INFO 11148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 13:53:51.399  INFO 11148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 13:53:51.561  INFO 11148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-04 13:53:51.562  INFO 11148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1926 ms
+2024-05-04 13:53:52.779  INFO 11148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-04 13:53:52.874  INFO 11148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2024-05-04 13:53:52.875  INFO 11148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 13:53:52.876  INFO 11148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 13:53:52.896  INFO 11148 --- [main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-05-04 13:53:52.896  INFO 11148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 111 ms
+2024-05-04 13:53:52.915  INFO 11148 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 9 endpoint(s) beneath base path '/actuator'
+2024-05-04 13:53:52.973  INFO 11148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2024-05-04 13:53:53.222  INFO 11148 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: USSDService, bean: USSDServiceController, class: com.anket.smppsimapi.controller.USSDServiceController
+2024-05-04 13:53:54.545  INFO 11148 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9001
+2024-05-04 13:53:54.564  INFO 11148 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 5.355 seconds (JVM running for 5.77)
+2024-05-04 14:35:10.069  INFO 22796 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 22796 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2024-05-04 14:35:10.077  INFO 22796 --- [main] c.a.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-05-04 14:35:12.768  INFO 22796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-04 14:35:12.783  INFO 22796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 14:35:12.784  INFO 22796 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 14:35:12.982  INFO 22796 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-04 14:35:12.983  INFO 22796 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2826 ms
+2024-05-04 14:35:13.283  WARN 22796 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'smppsimController': Unsatisfied dependency expressed through field 'simpleMOInjector'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'simpleMOInjector': Unsatisfied dependency expressed through field 'utils'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.anket.smppsimapi.utils.Utils' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-05-04 14:35:13.289  INFO 22796 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-05-04 14:35:13.313  INFO 22796 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-04 14:35:13.354 ERROR 22796 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field utils in com.anket.smppsimapi.service.SimpleMOInjector required a bean of type 'com.anket.smppsimapi.utils.Utils' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.anket.smppsimapi.utils.Utils' in your configuration.
+
+2024-05-04 14:37:41.698  INFO 10236 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 10236 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2024-05-04 14:37:41.702  INFO 10236 --- [main] c.a.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-05-04 14:37:44.144  INFO 10236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-04 14:37:44.161  INFO 10236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 14:37:44.161  INFO 10236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 14:37:44.385  INFO 10236 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-04 14:37:44.385  INFO 10236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2607 ms
+2024-05-04 14:37:46.839  INFO 10236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-04 14:37:47.003  INFO 10236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2024-05-04 14:37:47.009  INFO 10236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 14:37:47.010  INFO 10236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 14:37:47.052  INFO 10236 --- [main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-05-04 14:37:47.053  INFO 10236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 206 ms
+2024-05-04 14:37:47.085  INFO 10236 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 9 endpoint(s) beneath base path '/actuator'
+2024-05-04 14:37:47.184  INFO 10236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2024-05-04 14:37:47.761  INFO 10236 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: USSDService, bean: USSDServiceController, class: com.anket.smppsimapi.controller.USSDServiceController
+2024-05-04 14:37:49.566  INFO 10236 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9001
+2024-05-04 14:37:49.586  INFO 10236 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 8.331 seconds (JVM running for 8.794)
+2024-05-04 14:38:27.478 ERROR 10236 --- [grpc-default-executor-0] com.anket.smppsimapi.utils.HTTPSclient   : Failed to send USSD
+
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.controller.USSDServiceController.ussdRequest(USSDServiceController.java:59) [classes/:na]
+	at com.anket.gRPC.USSDServiceGrpc$MethodHandlers.invoke(USSDServiceGrpc.java:233) [classes/:na]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:171) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:808) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 14:38:27.481 ERROR 10236 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : Error occurred : 
+
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.controller.USSDServiceController.ussdRequest(USSDServiceController.java:59) ~[classes/:na]
+	at com.anket.gRPC.USSDServiceGrpc$MethodHandlers.invoke(USSDServiceGrpc.java:233) [classes/:na]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:171) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:808) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 14:38:27.482  INFO 10236 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : Program terminated
+2024-05-04 14:54:59.485  INFO 20920 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 20920 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2024-05-04 14:54:59.491  INFO 20920 --- [main] c.a.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-05-04 14:55:02.153  INFO 20920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-04 14:55:02.170  INFO 20920 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 14:55:02.171  INFO 20920 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 14:55:02.365  INFO 20920 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-04 14:55:02.365  INFO 20920 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2796 ms
+2024-05-04 14:55:05.379  INFO 20920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-04 14:55:05.552  INFO 20920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2024-05-04 14:55:05.553  INFO 20920 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 14:55:05.553  INFO 20920 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 14:55:05.587  INFO 20920 --- [main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-05-04 14:55:05.588  INFO 20920 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 197 ms
+2024-05-04 14:55:05.624  INFO 20920 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 9 endpoint(s) beneath base path '/actuator'
+2024-05-04 14:55:05.748  INFO 20920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2024-05-04 14:55:06.526  INFO 20920 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: USSDService, bean: USSDServiceController, class: com.anket.smppsimapi.controller.USSDServiceController
+2024-05-04 14:55:09.689  INFO 20920 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9001
+2024-05-04 14:55:09.728  INFO 20920 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 10.701 seconds (JVM running for 11.202)
+2024-05-04 14:56:40.175  INFO 12096 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 12096 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2024-05-04 14:56:40.180  INFO 12096 --- [main] c.a.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-05-04 14:56:55.222  INFO 21520 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 21520 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2024-05-04 14:56:55.231  INFO 21520 --- [main] c.a.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-05-04 14:56:57.904  INFO 21520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-04 14:56:57.920  INFO 21520 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 14:56:57.920  INFO 21520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 14:56:58.106  INFO 21520 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-04 14:56:58.106  INFO 21520 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2796 ms
+2024-05-04 14:57:00.044  INFO 21520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-04 14:57:00.169  INFO 21520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2024-05-04 14:57:00.170  INFO 21520 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 14:57:00.171  INFO 21520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 14:57:00.199  INFO 21520 --- [main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-05-04 14:57:00.200  INFO 21520 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 150 ms
+2024-05-04 14:57:00.240  INFO 21520 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 9 endpoint(s) beneath base path '/actuator'
+2024-05-04 14:57:00.322  INFO 21520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2024-05-04 14:57:00.825  INFO 21520 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: USSDService, bean: USSDServiceController, class: com.anket.smppsimapi.controller.USSDServiceController
+2024-05-04 14:57:02.501  INFO 21520 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9001
+2024-05-04 14:57:02.518  INFO 21520 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 7.787 seconds (JVM running for 8.276)
+2024-05-04 14:57:12.252  INFO 21520 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : shortMessage1_: *1402*2#
+2024-05-04 14:57:23.421 ERROR 21520 --- [grpc-default-executor-0] com.anket.smppsimapi.utils.HTTPSclient   : Failed to send USSD
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.controller.USSDServiceController.ussdRequest(USSDServiceController.java:72) [classes/:na]
+	at com.anket.gRPC.USSDServiceGrpc$MethodHandlers.invoke(USSDServiceGrpc.java:233) [classes/:na]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:171) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:808) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 14:57:23.423 ERROR 21520 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : Error occurred : 
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.controller.USSDServiceController.ussdRequest(USSDServiceController.java:72) ~[classes/:na]
+	at com.anket.gRPC.USSDServiceGrpc$MethodHandlers.invoke(USSDServiceGrpc.java:233) [classes/:na]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:171) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:808) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 14:57:23.424  INFO 21520 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : Program terminated
+2024-05-04 15:05:38.364  INFO 624 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 624 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2024-05-04 15:05:38.370  INFO 624 --- [main] c.a.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-05-04 15:05:40.967  INFO 624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-04 15:05:40.983  INFO 624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 15:05:40.983  INFO 624 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 15:05:41.198  INFO 624 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-04 15:05:41.199  INFO 624 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2755 ms
+2024-05-04 15:05:43.120  INFO 624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-04 15:05:43.239  INFO 624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2024-05-04 15:05:43.244  INFO 624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 15:05:43.245  INFO 624 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 15:05:43.276  INFO 624 --- [main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-05-04 15:05:43.280  INFO 624 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 148 ms
+2024-05-04 15:05:43.305  INFO 624 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 9 endpoint(s) beneath base path '/actuator'
+2024-05-04 15:05:43.378  INFO 624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2024-05-04 15:05:43.820  INFO 624 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: USSDService, bean: USSDServiceController, class: com.anket.smppsimapi.controller.USSDServiceController
+2024-05-04 15:05:45.364  INFO 624 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9001
+2024-05-04 15:05:45.382  INFO 624 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 7.527 seconds (JVM running for 7.982)
+2024-05-04 15:05:55.834  INFO 624 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : shortMessage1_: *1402*2#
+2024-05-04 15:06:06.864 ERROR 624 --- [grpc-default-executor-0] com.anket.smppsimapi.utils.HTTPSclient   : Failed to send USSD
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.controller.USSDServiceController.ussdRequest(USSDServiceController.java:70) [classes/:na]
+	at com.anket.gRPC.USSDServiceGrpc$MethodHandlers.invoke(USSDServiceGrpc.java:233) [classes/:na]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:171) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:808) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 15:06:06.867 ERROR 624 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : Error occurred :: 
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.controller.USSDServiceController.ussdRequest(USSDServiceController.java:70) ~[classes/:na]
+	at com.anket.gRPC.USSDServiceGrpc$MethodHandlers.invoke(USSDServiceGrpc.java:233) [classes/:na]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:171) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:808) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 15:06:06.868  INFO 624 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : Program terminated
+2024-05-04 15:08:00.690  INFO 15396 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Starting SmppsimApiApplication using Java 1.8.0_202 on COMV-8984 with PID 15396 (D:\sts-workspace\springboot\SmppsimApi\target\classes started by anket.singh in D:\sts-workspace\springboot\SmppsimApi)
+2024-05-04 15:08:00.703  INFO 15396 --- [main] c.a.smppsimapi.SmppsimApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-05-04 15:08:06.301  INFO 15396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-04 15:08:06.340  INFO 15396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 15:08:06.342  INFO 15396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 15:08:06.884  INFO 15396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-04 15:08:06.885  INFO 15396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6007 ms
+2024-05-04 15:08:10.704  INFO 15396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-04 15:08:10.989  INFO 15396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2024-05-04 15:08:10.991  INFO 15396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-04 15:08:10.992  INFO 15396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-05-04 15:08:11.064  INFO 15396 --- [main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-05-04 15:08:11.067  INFO 15396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 338 ms
+2024-05-04 15:08:11.120  INFO 15396 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 9 endpoint(s) beneath base path '/actuator'
+2024-05-04 15:08:11.238  INFO 15396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2024-05-04 15:08:11.903  INFO 15396 --- [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: USSDService, bean: USSDServiceController, class: com.anket.smppsimapi.controller.USSDServiceController
+2024-05-04 15:08:14.410  INFO 15396 --- [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9001
+2024-05-04 15:08:14.458  INFO 15396 --- [main] c.a.smppsimapi.SmppsimApiApplication     : Started SmppsimApiApplication in 14.803 seconds (JVM running for 15.735)
+2024-05-04 15:08:19.848  INFO 15396 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : shortMessage1_: *1402*2#
+2024-05-04 15:08:30.879 ERROR 15396 --- [grpc-default-executor-0] com.anket.smppsimapi.utils.HTTPSclient   : Failed to send USSD
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.controller.USSDServiceController.ussdRequest(USSDServiceController.java:70) [classes/:na]
+	at com.anket.gRPC.USSDServiceGrpc$MethodHandlers.invoke(USSDServiceGrpc.java:233) [classes/:na]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:171) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:808) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 15:08:30.883 ERROR 15396 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : Error occurred :: 
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.controller.USSDServiceController.ussdRequest(USSDServiceController.java:70) ~[classes/:na]
+	at com.anket.gRPC.USSDServiceGrpc$MethodHandlers.invoke(USSDServiceGrpc.java:233) [classes/:na]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:171) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:808) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 15:08:30.941  INFO 15396 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : Program terminated
+2024-05-04 15:08:58.869  INFO 15396 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : shortMessage1_: 
+2024-05-04 15:08:58.870  INFO 15396 --- [grpc-default-executor-0] c.a.s.controller.USSDServiceController   : Program terminated
+2024-05-04 15:10:56.716  INFO 15396 --- [grpc-default-executor-1] c.a.s.controller.USSDServiceController   : shortMessage1_: *1402*2#
+2024-05-04 15:11:07.620 ERROR 15396 --- [grpc-default-executor-1] com.anket.smppsimapi.utils.HTTPSclient   : Failed to send USSD
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.controller.USSDServiceController.ussdRequest(USSDServiceController.java:70) [classes/:na]
+	at com.anket.gRPC.USSDServiceGrpc$MethodHandlers.invoke(USSDServiceGrpc.java:233) [classes/:na]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:171) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:808) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 15:11:07.621 ERROR 15396 --- [grpc-default-executor-1] c.a.s.controller.USSDServiceController   : Error occurred :: 
+
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_202]
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[na:1.8.0_202]
+	at com.anket.smppsimapi.utils.HTTPSclient.sendSingleSMS(HTTPSclient.java:46) ~[classes/:na]
+	at com.anket.smppsimapi.controller.USSDServiceController.ussdRequest(USSDServiceController.java:70) ~[classes/:na]
+	at com.anket.gRPC.USSDServiceGrpc$MethodHandlers.invoke(USSDServiceGrpc.java:233) [classes/:na]
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:171) [grpc-stub-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.PartialForwardingServerCallListener.onHalfClose(PartialForwardingServerCallListener.java:35) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:23) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onHalfClose(ForwardingServerCallListener.java:40) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onHalfClose(Contexts.java:86) [grpc-api-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:808) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) [grpc-core-1.22.2.jar:1.22.2]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) [grpc-core-1.22.2.jar:1.22.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+
+2024-05-04 15:11:07.622  INFO 15396 --- [grpc-default-executor-1] c.a.s.controller.USSDServiceController   : Program terminated
