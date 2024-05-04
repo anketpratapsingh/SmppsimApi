@@ -1,7 +1,6 @@
 package com.anket.smppsimapi.service;
 
 import static com.anket.smppsimapi.utils.USSDStatusCode.INTERNAL_SERVER_ERROR;
-import static com.anket.smppsimapi.utils.USSDStatusCode.INVALID_SHORT_MESSAGE;
 import static com.anket.smppsimapi.utils.USSDStatusCode.MSISDN_MISMATCH;
 import static com.anket.smppsimapi.utils.USSDStatusCode.SUCCESS;
 
@@ -67,7 +66,7 @@ public class SingleUSSDRequestHandler implements StreamObserver<SingleUSSDReques
 			}
 
 			if (!Utils.isValidSelection(singleUSSDRequest.getShortMessage())) {
-				handleInvalidShortMessage();
+				Utils.handleInvalidShortMessage(responseObserver);
 				return;
 			}
 
@@ -106,15 +105,6 @@ public class SingleUSSDRequestHandler implements StreamObserver<SingleUSSDReques
 				.augmentDescription("errorCode: " + MSISDN_MISMATCH.getStatusCode())
 				.augmentDescription("errorMessage: " + MSISDN_MISMATCH.getStatusMessage())
 				.augmentDescription("errorDescription: " + MSISDN_MISMATCH.getDescription());
-		responseObserver.onError(status.asRuntimeException());
-	}
-
-	private void handleInvalidShortMessage() {
-		log.error("Short message is null or empty, closing streaming");
-		Status status = Status.INVALID_ARGUMENT.withDescription("Short message is null or empty")
-				.augmentDescription("errorCode: " + INVALID_SHORT_MESSAGE.getStatusCode())
-				.augmentDescription("errorMessage: " + INVALID_SHORT_MESSAGE.getStatusMessage())
-				.augmentDescription("errorDescription: " + INVALID_SHORT_MESSAGE.getDescription());
 		responseObserver.onError(status.asRuntimeException());
 	}
 

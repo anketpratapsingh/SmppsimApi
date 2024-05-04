@@ -71,6 +71,10 @@ public class USSDServiceController extends USSDServiceImplBase {
 						log.info("USSD request sent Successfully");
 						utils.sleep(7000);
 					}else {
+						if (mainMenu) {
+							Utils.handleInvalidShortMessage(responseObserver);
+							return ;
+						}
 						break;
 					}
 				}

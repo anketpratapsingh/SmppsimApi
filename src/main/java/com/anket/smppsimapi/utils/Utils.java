@@ -3,6 +3,7 @@ package com.anket.smppsimapi.utils;
 import static com.anket.smppsimapi.utils.USSDStatusCode.GATEWAY_TIMEOUT;
 import static com.anket.smppsimapi.utils.USSDStatusCode.GENERAL_FAILURE;
 import static com.anket.smppsimapi.utils.USSDStatusCode.INVALID_INPUT;
+import static com.anket.smppsimapi.utils.USSDStatusCode.INVALID_SHORT_MESSAGE;
 import static com.anket.smppsimapi.utils.USSDStatusCode.SERVICE_UNAVAILABLE;
 import static com.anket.smppsimapi.utils.USSDStatusCode.UNKNOWN_HOST;
 
@@ -13,7 +14,6 @@ import java.net.UnknownHostException;
 import org.springframework.stereotype.Component;
 
 import com.anket.gRPC.Ussd.USSDResponse;
-import com.anket.gRPC.Ussd.USSDResponse.Builder;
 import com.anket.smppsimapi.config.SmppsimApiConfig;
 
 import io.grpc.Status;
@@ -57,6 +57,15 @@ public class Utils {
 				.augmentDescription("errorCode: " + INVALID_INPUT.getStatusCode())
 				.augmentDescription("errorMessage: " + INVALID_INPUT.getStatusMessage())
 				.augmentDescription("errorDescription: " + INVALID_INPUT.getDescription());
+		responseObserver.onError(status.asRuntimeException());
+	}
+	
+	public static void handleInvalidShortMessage(StreamObserver<USSDResponse> responseObserver) {
+		log.error("Short message is null or empty, closing streaming");
+		Status status = Status.INVALID_ARGUMENT.withDescription("Short message is null or empty")
+				.augmentDescription("errorCode: " + INVALID_SHORT_MESSAGE.getStatusCode())
+				.augmentDescription("errorMessage: " + INVALID_SHORT_MESSAGE.getStatusMessage())
+				.augmentDescription("errorDescription: " + INVALID_SHORT_MESSAGE.getDescription());
 		responseObserver.onError(status.asRuntimeException());
 	}
 
